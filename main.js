@@ -53,3 +53,54 @@
 // const ageOld = ageUser.filter(ageUser=> ageUser >= 27)
 
 // console.log(ageOld)
+
+
+
+
+
+
+// 1. У вас есть массив из юзеров ([{name: "Имя", age: 12}, 
+
+// {name: "Имя", age: 12}]), ваша задача вывести в консоль каждого юзера в красивом формате. По типу "Имя этого юзера "Имя" и ему 12 лет".
+
+// 2. У вас массив товаров. Выведите его сумму используя reduce
+
+// [
+// { name: "Книга", price: 450 },
+// { name: "Ручка", price: 50 },
+// { name: "Блокнот", price: 200 },
+// { name: "Карандаш", price: 30 }
+// ]
+
+
+// 1
+
+// const users = [
+
+//     { name: 'Sanek', age: 23 },
+//     { name: 'Serega', age: 20 },
+//     { name: 'Sunbel', age: 99 },
+//     { name: 'Rusik', age: 25 },
+//     { name: 'Ivan', age: 2 },
+
+// ]
+
+// users.forEach(user => {
+//   console.log(`Имя этого юзера "${user.name}" и ему ${user.age} лет`);
+// });
+
+
+
+// 2
+
+
+const product = [
+    { name: "Книга", price: 450 },
+    { name: "Ручка", price: 50 },
+    { name: "Блокнот", price: 200 },
+    { name: "Карандаш", price: 30 }
+]
+
+const sumProduct = product.reduce((acc, item) => {return acc+item.price},0)
+
+console.log(sumProduct)
