@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,6 +6,60 @@
 
 
 
+.card{
+    width: 300px;
+    margin: 100px auto;
+}
+
+.name__age{
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom:20px ;
+}
+
+
+
+
+.role{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.about{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+.skills-container{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 23px;
+    color: cadetblue;
+}
+
+#likeBtn{
+    background: darkorange;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .pizza__menu {
     margin: 100px 31px 0 70px;
     width: 256px;
@@ -64,4 +118,4 @@ img {
 
 .box__pizza{
     display: flex;
-}
+} */

@@ -112,76 +112,127 @@
 
 
 
-const arr = [
+
+const me = [
     {
-        id: 1,
-        title: "С креветками и трюфелями",
-        price: "от 600",
-        description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
-        img: "image pizza.png"
-
-    },
-
-      {
-        id: 2,
-        title: "С креветками и трюфелями",
-        price: "от 600",
-        description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
-        img: "image pizza.png"
-
-    },
-      {
-        id: 3,
-        title: "С креветками и трюфелями",
-        price: "от 600",
-        description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
-        img: "image pizza.png"
-
-    },
-      {
-        id: 4,
-        title: "С креветками и трюфелями",
-        price: "от 600",
-        description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
-        img: "image pizza.png"
+        id:1,
+        title: 'Моя анкета ',
+        name:'Samir',
+        age:19,
+        role: "Frontend Developer",
+        about: "Люблю верстать и разбираться в JavaScript. Учусь создавать бомбовые интерфейсы.",
+        skills: ["HTML", "CSS", "JavaScript", "React (скоро)"],
+     
 
     }
 ]
 
 
 
+let doc = document.querySelector('#me__info')
 
 
-let boxPizza = document.querySelector(".box__pizza")
 
 
 
-arr.forEach((item) => {
+me.forEach((item) => {
 
-    boxPizza.innerHTML+=`<div class="pizza__menu">
+          doc.innerHTML+= ` <div class="card">
 
-        <img src="image pizza.png" alt="">
+        <h1 class="name__age">${item.name} , ${item.age} лет</h1>
+        <p class="role">${item.role}</p>
+        <p class="about">${item.about}</p>
 
-        <div class="text__info__pizz">
-            <h4 class="text__info">С креветками и трюфелями</h4>
-
-
-            <p class="ing">Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец,
-                пармезан.350 г
-            </p>
+        <div class="skills-container">
+            ${item.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
         </div>
+        <button id="likeBtn">Лайкнуть анкету</button>
+    </div>`
+})
 
-        <div class="price">
 
-            <h5 class="price__pizza">от 600 ₽</h5>
-            <button class="basket">В корзину</button>
 
-        </div>
 
-    </div> `
+
+
+
+
+
+
+
+
+
+
+// const arr = [
+//     {
+//         id: 1,
+//         title: "С креветками и трюфелями",
+//         price: "от 600",
+//         description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
+//         img: "image pizza.png"
+
+//     },
+
+//       {
+//         id: 2,
+//         title: "С креветками и трюфелями",
+//         price: "от 600",
+//         description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
+//         img: "image pizza.png"
+
+//     },
+//       {
+//         id: 3,
+//         title: "С креветками и трюфелями",
+//         price: "от 600",
+//         description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
+//         img: "image pizza.png"
+
+//     },
+//       {
+//         id: 4,
+//         title: "С креветками и трюфелями",
+//         price: "от 600",
+//         description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
+//         img: "image pizza.png"
+
+//     }
+// ]
+
+
+
+
+
+// let boxPizza = document.querySelector(".box__pizza")
+
+
+
+// arr.forEach((item) => {
+
+//     boxPizza.innerHTML+=`<div class="pizza__menu">
+
+//         <img src="image pizza.png" alt="">
+
+//         <div class="text__info__pizz">
+//             <h4 class="text__info">С креветками и трюфелями</h4>
+
+
+//             <p class="ing">Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец,
+//                 пармезан.350 г
+//             </p>
+//         </div>
+
+//         <div class="price">
+
+//             <h5 class="price__pizza">от 600 ₽</h5>
+//             <button class="basket">В корзину</button>
+
+//         </div>
+
+//     </div> `
    
 
-})
+// })
 
 
 
