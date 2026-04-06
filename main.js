@@ -94,13 +94,107 @@
 // 2
 
 
-const product = [
-    { name: "Книга", price: 450 },
-    { name: "Ручка", price: 50 },
-    { name: "Блокнот", price: 200 },
-    { name: "Карандаш", price: 30 }
+// const product = [
+//     { name: "Книга", price: 450 },
+//     { name: "Ручка", price: 50 },
+//     { name: "Блокнот", price: 200 },
+//     { name: "Карандаш", price: 30 }
+// ]
+
+// const sumProduct = product.reduce((acc, item) => {return acc+item.price},0)
+
+// console.log(sumProduct)
+
+
+
+
+
+
+
+
+const arr = [
+    {
+        id: 1,
+        title: "С креветками и трюфелями",
+        price: "от 600",
+        description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
+        img: "image pizza.png"
+
+    },
+
+      {
+        id: 2,
+        title: "С креветками и трюфелями",
+        price: "от 600",
+        description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
+        img: "image pizza.png"
+
+    },
+      {
+        id: 3,
+        title: "С креветками и трюфелями",
+        price: "от 600",
+        description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
+        img: "image pizza.png"
+
+    },
+      {
+        id: 4,
+        title: "С креветками и трюфелями",
+        price: "от 600",
+        description: "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан.350",
+        img: "image pizza.png"
+
+    }
 ]
 
-const sumProduct = product.reduce((acc, item) => {return acc+item.price},0)
 
-console.log(sumProduct)
+
+
+
+let boxPizza = document.querySelector(".box__pizza")
+
+
+
+arr.forEach((item) => {
+
+    boxPizza.innerHTML+=`<div class="pizza__menu">
+
+        <img src="image pizza.png" alt="">
+
+        <div class="text__info__pizz">
+            <h4 class="text__info">С креветками и трюфелями</h4>
+
+
+            <p class="ing">Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец,
+                пармезан.350 г
+            </p>
+        </div>
+
+        <div class="price">
+
+            <h5 class="price__pizza">от 600 ₽</h5>
+            <button class="basket">В корзину</button>
+
+        </div>
+
+    </div> `
+   
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

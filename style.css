@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.pizza__menu {
+    margin: 100px 31px 0 70px;
+    width: 256px;
+    height: 468px;
+
+}
+
+img {
+    padding: auto;
+}
+
+.text__info {
+    color: #797979;
+    font-weight: 800;
+    font-size: 24px;
+    margin: 8px 0 14px 0;
+
+}
+
+.ing {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #686466;
+}
+
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 31px;
+    align-items: center;
+}
+
+
+.price__pizza {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 86%;
+    color: #231f20;
+}
+
+.basket {
+    border-radius: 8px;
+    width: 126px;
+    height: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 200%;
+    color: #473e43;
+    background: #f7d22d;
+    border: none;
+}
+
+.box__pizza{
+    display: flex;
+}
