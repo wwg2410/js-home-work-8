@@ -113,42 +113,42 @@
 
 
 
-const me = [
-    {
-        id:1,
-        title: 'Моя анкета ',
-        name:'Samir',
-        age:19,
-        role: "Frontend Developer",
-        about: "Люблю верстать и разбираться в JavaScript. Учусь создавать бомбовые интерфейсы.",
-        skills: ["HTML", "CSS", "JavaScript", "React (скоро)"],
-     
-
-    }
-]
+// const me = [
+//     {
+//         id:1,
+//         title: 'Моя анкета ',
+//         name:'Samir',
+//         age:19,
+//         role: "Frontend Developer",
+//         about: "Люблю верстать и разбираться в JavaScript. Учусь создавать бомбовые интерфейсы.",
+//         skills: ["HTML", "CSS", "JavaScript", "React (скоро)"],
 
 
-
-let doc = document.querySelector('#me__info')
+//     }
+// ]
 
 
 
+// let doc = document.querySelector('#me__info')
 
 
-me.forEach((item) => {
 
-          doc.innerHTML+= ` <div class="card">
 
-        <h1 class="name__age">${item.name} , ${item.age} лет</h1>
-        <p class="role">${item.role}</p>
-        <p class="about">${item.about}</p>
 
-        <div class="skills-container">
-            ${item.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
-        </div>
-        <button id="likeBtn">Лайкнуть анкету</button>
-    </div>`
-})
+// me.forEach((item) => {
+
+//           doc.innerHTML+= ` <div class="card">
+
+//         <h1 class="name__age">${item.name} , ${item.age} лет</h1>
+//         <p class="role">${item.role}</p>
+//         <p class="about">${item.about}</p>
+
+//         <div class="skills-container">
+//             ${item.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+//         </div>
+//         <button id="likeBtn">Лайкнуть анкету</button>
+//     </div>`
+// })
 
 
 
@@ -230,7 +230,7 @@ me.forEach((item) => {
 //         </div>
 
 //     </div> `
-   
+
 
 // })
 
@@ -243,6 +243,25 @@ me.forEach((item) => {
 
 
 
+
+const btn = document.querySelector('#btn__me');
+
+const imgDog = document.querySelector('.img__dog');
+
+
+btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (imgDog.style.display === 'none') {
+        imgDog.style.display = 'block';
+        e.target.textContent = "Убрать Собачку"
+
+    }
+    else {
+        imgDog.style.display = 'none';
+        e.target.textContent = "Показать Собачку"
+    }
+
+})
 
 
 
