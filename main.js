@@ -267,18 +267,50 @@
 
 
 
-function startCountdown(seconds) {
-  let timeLeft = seconds;
+// function startCountdown(seconds) {
+//   let timeLeft = seconds;
 
-  const timer = setInterval(() => {
-    if (timeLeft > 0) {
-      console.log(`Осталось: ${timeLeft} сек.`);
-      timeLeft--;
+//   const timer = setInterval(() => {
+//     if (timeLeft > 0) {
+//       console.log(`Осталось: ${timeLeft} сек.`);
+//       timeLeft--;
+//     } else {
+//       console.log("Время вышло!");
+//       clearInterval(timer); 
+//     }
+//   }, 1000);
+// }
+
+// startCountdown(10);
+
+
+
+let visitors = Number(prompt('Сколько людей ?'));
+let capacity = Number(prompt('Какая вместимость зала?'));
+
+
+const checkVisit = new Promise((res, rej) => {
+    if (visitors <= capacity) {
+        let freeSeats = capacity - visitors;
+        res(freeSeats);
     } else {
-      console.log("Время вышло!");
-      clearInterval(timer); 
-    }
-  }, 1000);
-}
 
-startCountdown(10);
+        rej("Мест нет");
+    }
+})
+
+checkVisit
+    .then((freeSeats) => {
+        console.log(`Осталось свободных мест: ${freeSeats}`);
+        return 'Добро пожаловать'
+    })
+    .then((message) => {
+        console.log(message);
+    })
+    .catch((error) => {
+        console.error(`Ошибка: ${error}`);
+    })
+    .finally(() => {
+
+        console.log("Если что, вернем деньги");
+    });
