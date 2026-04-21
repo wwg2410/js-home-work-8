@@ -244,27 +244,41 @@
 
 
 
-const btn = document.querySelector('#btn__me');
+// const btn = document.querySelector('#btn__me');
 
-const imgDog = document.querySelector('.img__dog');
+// const imgDog = document.querySelector('.img__dog');
 
 
-btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (imgDog.style.display === 'none') {
-        imgDog.style.display = 'block';
-        e.target.textContent = "Убрать Собачку"
+// btn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     if (imgDog.style.display === 'none') {
+//         imgDog.style.display = 'block';
+//         e.target.textContent = "Убрать Собачку"
 
+//     }
+//     else {
+//         imgDog.style.display = 'none';
+//         e.target.textContent = "Показать Собачку"
+//     }
+
+// })
+
+
+
+
+
+function startCountdown(seconds) {
+  let timeLeft = seconds;
+
+  const timer = setInterval(() => {
+    if (timeLeft > 0) {
+      console.log(`Осталось: ${timeLeft} сек.`);
+      timeLeft--;
+    } else {
+      console.log("Время вышло!");
+      clearInterval(timer); 
     }
-    else {
-        imgDog.style.display = 'none';
-        e.target.textContent = "Показать Собачку"
-    }
+  }, 1000);
+}
 
-})
-
-
-
-
-
-
+startCountdown(10);
