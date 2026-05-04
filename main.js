@@ -285,32 +285,65 @@
 
 
 
-let visitors = Number(prompt('Сколько людей ?'));
-let capacity = Number(prompt('Какая вместимость зала?'));
+// let visitors = Number(prompt('Сколько людей ?'));
+// let capacity = Number(prompt('Какая вместимость зала?'));
 
 
-const checkVisit = new Promise((res, rej) => {
-    if (visitors <= capacity) {
-        let freeSeats = capacity - visitors;
-        res(freeSeats);
-    } else {
+// const checkVisit = new Promise((res, rej) => {
+//     if (visitors <= capacity) {
+//         let freeSeats = capacity - visitors;
+//         res(freeSeats);
+//     } else {
 
-        rej("Мест нет");
-    }
+//         rej("Мест нет");
+//     }
+// })
+
+// checkVisit
+//     .then((freeSeats) => {
+//         console.log(`Осталось свободных мест: ${freeSeats}`);
+//         return 'Добро пожаловать'
+//     })
+//     .then((message) => {
+//         console.log(message);
+//     })
+//     .catch((error) => {
+//         console.error(`Ошибка: ${error}`);
+//     })
+//     .finally(() => {
+
+//         console.log("Если что, вернем деньги");
+//     });
+
+
+
+
+
+fetch('https://fakestoreapi.com/carts')
+    .then(response => response.json())
+    .then(data => console.log(data));
+
+
+
+
+fetch('https://fakestoreapi.com/carts/1')
+    .then(response => response.json())
+    .then(data => console.log(data));
+
+    
+const product = {
+    "id": 0,
+    "title": "this 1",
+    "price": 1000,
+    "description": "ручная полуавт. дверь",
+    "category": "ручка",
+    "image": "http://example.com"
+}
+
+
+
+fetch('https://fakestoreapi.com/carts/1', {
+  method: 'DELETE'
 })
-
-checkVisit
-    .then((freeSeats) => {
-        console.log(`Осталось свободных мест: ${freeSeats}`);
-        return 'Добро пожаловать'
-    })
-    .then((message) => {
-        console.log(message);
-    })
-    .catch((error) => {
-        console.error(`Ошибка: ${error}`);
-    })
-    .finally(() => {
-
-        console.log("Если что, вернем деньги");
-    });
+  .then(response => response.json())
+  .then(data => console.log(data));
